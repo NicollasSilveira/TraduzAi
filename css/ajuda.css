@@ -1,0 +1,145 @@
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+}
+
+section {
+  display: none; /* Esconde as seções inicialmente */
+}
+section.active {
+  display: block; /* Mostra a seção quando ativa */
+}
+
+.font {
+  font-size: 120%;
+  margin: 0 0 0 0;
+}
+
+/*INICIO - Caixas de Texto*/
+
+.comprimento {
+  max-width: 600px;
+  width: 100%;
+}
+
+.artigo {
+  background-color: #fff6e5;  /*fundo do texto*/
+  border: 1px solid #f9cddc;  /*cor da borda*/
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin: 0 0% 3% 12%;
+}
+
+.titulo {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #f9cddc;  /*fundo titulo*/
+  border-bottom: 1px solid #f9cddc;  /*borda da base*/
+  font-size: 20px;
+}
+
+.conteudo {
+  display: none;
+  padding: 5%;
+  text-align: justify;
+}
+
+.subTitulo {
+  font-size: 105%;
+  font-weight: bold;
+}
+
+#mais{
+  top: 0;
+  float: right ;
+  margin: -30px;
+  margin-right: 2%;
+}
+
+.content {
+text-align: justify;
+margin: 3% 3% 3% 3%;
+}
+
+/*FIM - Caixas de Texto*/
+
+#dificuldade {
+  text-align: right;
+  margin: -1% 15px 0 0;
+  font-size: 120%;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -4%;
+}
+
+#achouDificul {
+  text-align: right;
+  font-size: 145%;
+  margin: -1% 0 0 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+#logoCa {
+  margin: -5% 0 1% 3.5%;
+}
+
+#textoGeralAjuda {
+  margin: 0 3% 3% 3%;
+}
+
+.artigos {
+  margin: 0 0 0 3%;
+}
+
+/*Responsivo*/
+
+@media (max-width:1080px) {
+
+  #achouDificul {
+    text-align: right;
+    font-size: 145%;
+    margin: -1% 0 0 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+  
+  #man1 {
+    text-align: center;
+    
+  }
+
+  #h2-2{
+    text-align: center;
+    margin-top: 13%;
+  }
+
+  .font {
+    margin-top: 13%;
+    text-align: justify;
+  }
+
+  .content {
+    text-align: justify;
+    margin: 10% 15% 10% 3%;
+    }
+
+
+  .titulo {
+    padding: 15% 0 15% 0;
+    margin-top: 10%;
+    text-align: center;
+    margin-right: 48px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f9cddc;  /*fundo titulo*/
+    border-bottom: 1px solid #f9cddc;  /*borda da base*/
+    font-size: 20px;
+  }
+
+  #mais {
+  margin-top: -8%;  
+  }
+  
+}

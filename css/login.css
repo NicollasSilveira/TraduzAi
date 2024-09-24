@@ -1,0 +1,275 @@
+/*Texto "é novo aqui"*/
+
+#novoUsuario {
+  text-align: right;
+  margin: -1% 15px 0 0;
+  font-size: 120%;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -4%;
+}
+
+#novoAqui {
+  text-align: right;
+  font-size: 145%;
+  margin: -1% 0 0 0;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Div Center */
+
+#divCenter {
+  width: 400px;
+  height: 150px;
+  left: 45%;
+  margin: -130px 0 0 -200px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+}
+
+/* li 
+#um,
+#tres {
+  color: ;
+}
+*/
+
+#um,
+#dois,
+#tres,
+#quatro,
+/* pra ficar meneiro eu jogo o clima lá no alto*/
+#cinco {
+  z-index: 1;
+  padding-bottom: 2%;
+
+}
+
+#dois,
+#quatro {
+  padding-bottom: 10%;
+}
+
+/* Texto : Login / Senha */
+
+font {
+  margin-left: 40px;
+  font-weight: bold;
+  font-size: 155%;
+}
+
+/* Input */
+
+.login-login,
+.senha-login {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #f9cddc;
+  width: 150%;
+  height: 40px;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+/* Input / Placeholder */
+
+.login-login::placeholder,
+.senha-login::placeholder {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Botão */
+
+#botao {
+
+  font-weight: bold;
+  font-size: 155%;
+  text-decoration: none;
+  background-color: #f9cddc;
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 40%;
+
+  /* Animação Botão */
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #f2ccca;
+  -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #f2ccca;
+  box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #5f5d5d;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+#botao:hover {
+  background: #e3e3e3;
+  cursor: pointer;
+}
+
+#botao:active {
+  top: 10px;
+  background-color: #F9E7E6;
+  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #aca49a;
+  -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #aca49a;
+  box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #aca49a;
+}
+
+/* Botão / Div */
+
+#Botao {
+  width: 400px;
+  height: auto;
+  left: 100%;
+  margin: -130px 0 0 -200px;
+  padding: 10px;
+  position: absolute;
+  top: 250%;
+}
+
+#cadaLogin {
+
+  padding: 10%;
+  position: absolute;
+  top: 123%;
+  color: black;
+  font-size: 130%;
+
+}
+
+#cadaLogin h1 {
+  font-size: 100%;
+}
+
+
+#faleCnc2 {
+  padding-top: 32%;
+}
+
+/*Responsivo*/
+
+@media (max-width:951px) {
+
+  #logoCa {
+    display: none;
+  }
+
+  #novoAqui {
+    text-align: center;
+    font-size: 145%;
+    margin: 0 0 0 15%;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: -20%;
+  }
+
+  #clickAqui2 {
+    margin: 0 0 10% 0;
+
+  }
+
+  .login-login,
+  .senha-login {
+    margin-left: 5%;
+    width: 100%;
+  }
+
+  #Botao {
+    margin-top: 20%;
+    overflow: hidden;
+    width: 80%;
+    box-sizing: content-box;
+    margin: 10px auto;
+    float: left;
+    left: 0;
+  }
+
+  #faleCnc2 {
+    margin-top: 120%;
+    display: inline;
+    float: left;
+    padding-left: 2px;
+
+  }
+
+  #faleCnc2 img {
+    width: 1px;
+    height: 1px;
+  }
+
+}
+
+#logoCa {
+  margin: -5% 0 1% 3.5%;
+}
+
+@media (max-width: 762px) {
+
+  .login-login,
+  .senha-login {
+    width: 100%;
+    height: 40px;
+  }
+
+  #botao {
+    width: 80%;
+  }
+
+  #Botao {
+    margin-top: 20%;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  #novoAqui {
+    font-size: 120%;
+    margin-top: -10%;
+  }
+
+  #novoUsuario {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  #botao {
+    width: 80%;
+  }
+
+  #Botao {
+    margin-top: 13%;
+    width: 70%;
+    margin-left: 3%;
+  }
+
+  #novoAqui {
+    font-size: 120%;
+    margin-top: -20%;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .login-login,
+  .senha-login {
+    width: 85%;
+    height: 40px;
+  }
+
+  #divCenter {
+    margin: -130px 0 0 -180px;
+  }
+
+  #novoAqui {
+    font-size: 100%;
+    margin-top: 0;
+    margin-bottom: 65%;
+    visibility: hidden;
+  }
+}
