@@ -20,6 +20,13 @@
   <title>LOGS</title>
 </head>
 
+<?php
+include "php\connectDb.php";
+
+$sql = "SELECT id, USUARIO_id, dataHora, acaoResult, dadosEntrada FROM log";
+$result = $conn->query($sql);
+?>
+
 <body>
   <header>
     <nav>
@@ -69,25 +76,22 @@
               <th>AÇÃO</th>
               <th>ENTRADA</th>
            </tr>
-              <td>1</td>
-              <td>44</td>
-              <td>20:10 20/10/2010</td>
-              <td>ERRO NO 2FA (NOME DA MAE)</td>
-              <td>JERUSINHA</td>
-            </tr>
-            <td>2</td>
-            <td>512</td>
-            <td>14:20 20/10/2010</td>
-            <td>ERRO NO 2FA (VIA CEP)</td>
-            <td>21625000</td>
-          </tr>
-        </tr>
-        <td>3</td>
-        <td>16</td>
-        <td>14:20 20/10/2010</td>
-        <td>ERRO TROCA DE SENHA (DTNASCIMENTO)</td>
-        <td>01/01/1900</td>
-      </tr>
+           <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                <th>" . $row['id'] . "</th>
+                <th>" . $row['USUARIO_id'] . "</th>
+                <th>" . $row['dataHora'] . "</th>
+                <th>" . $row['acaoResult'] . "</th>
+                <th>" . $row['dadosEntrada'] . "</th>
+             </tr>";
+                }
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+           ?>
           </table>
         </div>
 
