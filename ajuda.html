@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <meta charset="utf-8"/>
+    <script src="script/adicionais.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Central de Ajuda</title>
+    <link rel="stylesheet" href="css/ajuda.css"/>
+    <link rel="stylesheet" href="css/bg.css"/>
+    <script src="script/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li id="pergunta">
+            <a><p class="tamPequeno">Precisa de ajuda? Digite aqui como podemos te ajudar.</p></a>
+          </li>
+          <li>
+              <input
+                class="tamPequeno"
+                id="pesqNav"
+                type="text"
+                placeholder="Selecione um artigo..."
+                list="artigos"
+                name="artigos"
+                oninput="redirecionarParaArtigo(this.value)"
+              />
+              <datalist id="artigos">
+                <option value="Como usar o TraduzAí?" data-target="como-usar-traduza"></option>
+                <option value="Encontrei um erro na minha tradução, e agora?" data-target="erro-traducao"></option>
+                <option value="Por que não há outros idiomas disponíveis?" data-target="outros-idiomas"></option>
+              </datalist>
+          </li>
+
+          <li>
+            <img src="img/lupa.png"
+              id="lupa" width="32px" height="32px">
+          </li>
+      <!-- MENU DROPDOWN !-->
+          <div id="navIcon">
+            <li>
+              <a href="index.html"><img id="logoNav" src="img/Logo.png" alt="Volar a pagina principal" title="Volar a pagina principal"></a>
+            </li>
+            <li>
+              <img src="img/LuaModoEscuro.png" class="trocarTema" id="temaClar" width="40px" height="40px" alt="Trocar para tema escuro" title="Trocar para tema escuro"/>
+              <img src="img/SolModoClaro.png" class="trocarTema" id="temaEscu" width="33px" height="33px" alt="Trocar para tema claro" title="Trocar para tema claro"/>
+            </li>
+        <div class="drop">
+          <li><img class="imgNav" id="treslinhas" src="img/tresLinhas.png"/>
+        <div class="dropdown-content" id="papai">
+                  <a id="textoDrop" href="login.html" style="text-decoration: none;">Login</a>
+                  <a id="textoDrop2" href="cadastro.html" style="text-decoration: none;">Cadastro</a>
+                  <a id="textoDrop3" href="sobreNos.html" style="text-decoration: none;">Sobre</a>
+        </div>
+        </div>
+            <li><a href="Configuracoes.html"><img class="imgNav" title="Configurações" src="img/pessoa.png"/></a></li>
+        </div>
+      <!-- FIM MENU DROPDOWN !-->
+      </nav>
+    </header>
+    <main>
+       <img id="logoCa" src="img/LogoTest.png" height="70px" width="210px">
+      
+        <div id="dificuldade">
+          <p id="achouDificul">Encontrou alguma dificuldade?</p>
+          <p id="man1">Vamos te ajudar!</p>
+        </div>
+
+      <div id="textoGeralAjuda">
+      <p>
+        <b><h2 id="h2-2">Central de Ajuda!</h2></b>
+      <p class="font">Bem-vindo á Central de Ajuda TraduzAí! Precisa de ajuda com traduções? Você está no lugar certo! Nossa comunidade está aqui para tornar a tradução fácil e acessível para todos.</p>
+      <p class="font">Junte-se a nós para encontrar respostas rápidas, dicas úteis e suporte especializado. Estamos ansiosos para ajudá-lo a desvendar os mistérios dos idiomas.</p>
+      </div>
+      
+      <div class="comprimento">
+        <div class="artigo" id="bordtop">
+          <div class="titulo" id="inf" onclick="toggleContent('como-usar-traduza')">
+              <span> <p id="txt" style="height: 10px;"> Como usar o TraduzAí? </p> <b><p id="mais">+</p></b> </span>
+          </div>
+          <section id="como-usar-traduza" class="content">
+              <p>O TraduzAí é uma ferramenta online que facilita a tradução de documentos em formato PDF ou páginas da web. 
+                Com este tutorial simples, você aprenderá como usar o TraduzAí para traduzir seus arquivos com facilidade.</p>
+              <p class="subTitulo">Passo 1: Acessar o TraduzAí</p>
+                <p>• Abra o seu navegador da web e vá para o site do TraduzAí (www.traduzai.com).</p>
+              <p class="subTitulo">Passo 2: Selecionar o Tipo de Arquivo</p>
+              <p>Na página inicial do TraduzAí, você verá duas opções: "Enviar Arquivo" e "Traduzir Página Web".
+                Escolha a opção adequada com base no tipo de documento que você deseja traduzir.</p>
+                <p>• Enviar Arquivo: Se você tem um arquivo PDF que deseja traduzir, clique em "Enviar Arquivo".</p>
+                <p>• Traduzir Página Web: Se você deseja traduzir uma página da web, insira a URL na caixa de texto e clique em "Traduzir Página Web".</p>
+              <p class="subTitulo">Passo 3: Enviar o Arquivo ou URL</p>
+                <p>• Se você escolheu a opção "Enviar Arquivo", clique em "Selecionar Arquivo" e escolha o arquivo PDF que deseja traduzir em seu computador. Selecione a imagem correspondente ao tipo de arquivo que você está enviando.</p>
+                <p>• Se você optou por "Traduzir Página Web", cole o link da página da web na caixa de texto e clique em "Traduzir Página Web".</p>
+              <p class="subTitulo">Passo 4: Aguardar a Tradução</p>
+                <p>• Após enviar o arquivo ou URL, o TraduzAí começará a processar a tradução. 
+                Isso pode levar alguns segundos ou minutos, dependendo do tamanho do documento ou da página da web.</p>
+                <p>• Enquanto aguarda, você verá uma barra de progresso indicando o status da tradução.</p>
+              <p class="subTitulo">Passo 5: Aproveitar a Leitura</p>
+                <p>• Assim que a tradução estiver concluída, você verá o documento traduzido na tela. Você pode rolar para baixo para ler o texto traduzido.</p>
+                <p>• Se necessário, você também pode baixar o documento traduzido para o seu computador clicando no botão "Baixar".</p>
+              <p class="subTitulo">Dicas Adicionais:</p>
+                <p>• O TraduzAí utiliza tecnologia de tradução automática, então é possível que algumas traduções não sejam perfeitas. Sempre revise o documento traduzido para garantir a precisão.</p>
+                <p>• Se você tiver problemas com a tradução ou precisar de assistência adicional, entre em contato com o suporte do TraduzAí através dos canais de comunicação fornecidos no site.</p>
+          </section>
+        </div>
+        <div class="artigo" id="bordtop2">
+          <div class="titulo" id="inf2" onclick="toggleContent('erro-traducao')">
+            <span>
+              <p id="txt" style="height: 10px;">Encontrei um erro na minha tradução, e agora?</p> <b><p id="mais">+</p></b>
+            </span>
+          </div>
+          <section id="erro-traducao" class="content">
+            <p>O TraduzAí é uma plataforma incrível que permite aos usuários traduzir documentos PDF e páginas da web com facilidade e conveniência. No entanto, como em qualquer serviço de tradução automática, erros podem ocorrer ocasionalmente. Se você encontrar uma tradução incorreta ou imprecisa, não se preocupe! O TraduzAí tem um processo simples para relatar esses erros e melhorar seu serviço.</p>
+            <p class="subTitulo">Passo 1: Identificar o Erro de Tradução</p>
+            <p>Ao revisar o documento traduzido, se você encontrar um erro de tradução, é importante identificar claramente o trecho onde o erro ocorreu. Se possível, compare-o com o texto original para entender a discrepância.</p>
+            <p class="subTitulo">Passo 2: Contatar o Suporte</p>
+            <p>O TraduzAí oferece um canal dedicado para relatar erros de tradução. Você pode entrar em contato com o suporte através do e-mail faleconoscotraduzai@gmail.com. Ao enviar um e-mail, forneça as seguintes informações:</p>
+            <p>• Assunto: "Relatório de Erro de Tradução".</p>
+            <p>• Descrição detalhada do erro, incluindo o texto original e a tradução incorreta.</p>
+            <p>• Se aplicável, anexe o documento original ou forneça a URL da página da web traduzida.</p>
+            <p class="subTitulo">Passo 3: Aguardar a Resposta</p>
+            <p>Após enviar o e-mail, aguarde a resposta da equipe de suporte do TraduzAí. Nossa equipe analisará o relatório e trabalhará para corrigir o erro o mais rápido possível.</p>
+            <p class="subTitulo">Passo 4: Receber a Solução</p>
+            <p>Assim que o erro for corrigido, você receberá uma resposta do suporte informando sobre a resolução do problema. Você também pode receber orientações adicionais ou esclarecimentos, caso necessário.</p>
+            <p class="subTitulo">Dicas Adicionais:</p>
+            <p>• Se possível, inclua capturas de tela ou evidências adicionais para ajudar a ilustrar o erro de tradução.</p>
+            <p>• Se você estiver relatando um erro em uma página da web, forneça a URL específica da página onde o erro ocorreu.</p>
+            <p>• Lembre-se de que a tecnologia de tradução automática pode ter limitações e é possível que alguns erros ocorram. Sua contribuição é fundamental para melhorar a precisão e qualidade do serviço do TraduzAí.</p>
+            <p>Ao relatar erros de tradução, você está ajudando a melhorar o serviço para todos os usuários. A equipe do TraduzAí agradece sua colaboração e está comprometida em fornecer uma experiência de tradução precisa e confiável. Continue usando o TraduzAí para suas necessidades de tradução e conte conosco para ajudá-lo sempre que precisar!</p>
+          </section>
+        </div>
+        <div class="artigo" id="bordtop3">
+          <div class="titulo" id="inf3" onclick="toggleContent('outros-idiomas')">
+            <span>
+              <p id="txt" style="height: 10px;">Por que não há outros idiomas disponíveis?</p><b><p id="mais">+</p></b>
+            </span>
+          </div>
+          <section id="outros-idiomas" class="content">
+            <p>O TraduzAí, um serviço de tradução online, tem se destacado por sua eficiência e conveniência. No entanto, alguns usuários podem se perguntar por que a plataforma oferece apenas alguns idiomas para tradução. Aqui está uma explicação sobre essa escolha estratégica: Foco na Qualidade: Ao oferecer apenas alguns idiomas, o 	TraduzAí pode concentrar seus recursos e esforços em garantir a melhor qualidade de tradução possível para esses idiomas. Isso significa que a equipe pode se dedicar a aprimorar os algoritmos de tradução e realizar testes abrangentes para garantir que as traduções sejam precisas e confiáveis. Atendimento à Demanda do Público-Alvo: A escolha dos idiomas oferecidos pelo TraduzAí é baseada na demanda do público-alvo. Idiomas com maior demanda são priorizados para garantir que a plataforma atenda às necessidades da maioria dos usuários. Isso permite uma experiência de tradução mais relevante e útil para os usuários.</p>
+            <p><b>Facilidade de Manutenção:</b> Manter a qualidade das traduções em diversos idiomas requer um grande esforço. Ao limitar o número de idiomas oferecidos, o TraduzAí pode simplificar o processo de manutenção e garantir que as traduções permaneçam precisas e atualizadas.</p>
+            <p><b>Preparação para o Futuro:</b> Embora o TraduzAí atualmente ofereça apenas alguns idiomas, está nos planos da equipe integrar novos idiomas à plataforma no futuro. Isso significa que, à medida que a plataforma cresce e se desenvolve, mais idiomas serão adicionados, oferecendo uma gama ainda mais ampla de opções de tradução para os usuários.</p>
+            <p>O TraduzAí continua comprometido em fornecer um serviço de tradução de alta qualidade, atendendo às demandas e necessidades de seus usuários. A escolha estratégica de oferecer apenas alguns idiomas no momento reflete o compromisso da equipe com a excelência e a melhoria contínua do serviço. Com o tempo, novos idiomas serão adicionados, ampliando ainda mais as capacidades do TraduzAí e tornando-o uma ferramenta de tradução ainda mais valiosa e abrangente para usuários em todo o mundo.</p>
+          </section>
+        </div>
+      </div> 
+        <script src="script/ajuda.js"></script>
+    </main>
+    
+    <footer>
+      <div id="avatar">
+        <img id="avatrImg" src="img/Avatar.png" width="430px" height="430px"/>
+      </div>
+
+      <div id="faleCnc">
+        <ul>
+          <li>
+              <a href="https://mail.google.com/mail/?view=cm&to=faleconoscotraduzai@gmail.com&su=Oi,%20pode%20me%20ajudar?" target="_blank">
+                 <img id="em" src="img/Email_TemaClaro.png"> <a href="https://mail.google.com/mail/?view=cm&to=faleconoscotraduzai@gmail.com&su=Oi,%20pode%20me%20ajudar?" target="_blank" id="fale">Fale conosco</a>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  

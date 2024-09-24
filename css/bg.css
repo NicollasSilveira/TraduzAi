@@ -1,0 +1,386 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* informe cadastro*/
+
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url(../img/fundo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/********** HEADER E FOOTER **********/
+
+#lupa {
+  display: none;
+}
+
+#temaClar {
+  margin-top: -3%;
+  margin-left: -10%;
+}
+
+#pessoa {
+  margin-left: 15px;
+}
+
+#temaEscu {
+  margin-top: 8%;
+  margin-left: -24%;
+}
+
+.pop-up {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff6e5;
+  border: 3px solid black;
+  border-radius: 9px;
+  padding: 9px;
+  text-align: justify;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.trocarTema {
+  cursor: pointer;
+}
+
+#msgTema {
+  color: black;
+  display: none;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+#voltar {
+  color: black;
+  display: none;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+#pesqNav input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+#pesqNav::placeholder {
+  text-align: center;
+}
+
+/*Fale Conosco Errado*/
+
+#faleCnc {
+  margin-top: 4.7%;
+  margin-left: 1.5%;
+  float: left;
+  position: relative;
+}
+
+#faleCnc a {
+  color: black;
+}
+
+#faleCnc img {
+  width: 32px;
+  height: 32px;
+}
+
+#faleCnc li {
+  display: inline;
+  float: left;
+  padding-left: 2px;
+}
+
+/*FALECNC DA TELA DE LOGIN*/
+#faleCnc2 {
+  margin-left: 1.5%;
+  margin-bottom: 0.5%;
+  float: left;
+  position: relative;
+}
+
+#faleCnc2 a {
+  color: black;
+}
+
+#faleCnc2 li {
+  display: inline;
+  float: left;
+  padding-left: 2px;
+}
+
+#faleCnc2 img {
+  width: 32px;
+  height: 32px;
+}
+
+/*FIM FALECNC DA TELA DE LOGIN*/
+
+/**/
+
+
+
+
+/**/
+
+/*CADASTRO FALECNC*/
+
+#faleCnc3 {
+  bottom: 0;
+  margin-left: 25px;
+  float: left;
+  position: relative;
+
+}
+
+#faleCnc3 a {
+  color: black;
+}
+
+#faleCnc3 li {
+  display: inline;
+  float: left;
+  padding-left: 2px;
+}
+
+#faleCnc3 img {
+  width: 32px;
+  height: 32px;
+}
+
+/*FIM CADASTRO FALECNC*/
+#avatar {
+  right: 0;
+  padding-right: 25px;
+  bottom: 0;
+  z-index: -1;
+  position: fixed;
+}
+
+#logoNav {
+  max-width: 61%;
+  margin-top: -4px;
+  padding: auto;
+}
+
+nav {
+  text-align: justify;
+  position: fixed;
+  top: 0%;
+  background: linear-gradient(to bottom, #E48FA4, #f9cddc);
+  z-index: 1;
+  width: 100% !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+nav li {
+  display: inline;
+  float: left;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+main {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.imgNav {
+  width: 32px;
+  height: 32px;
+
+}
+
+
+#navIcon {
+  float: right;
+  padding-right: 25px;
+}
+
+
+
+/* Dropdown */
+
+.drop {
+  float: left;
+  padding-right: 5px;
+  padding-top: 2px;
+
+}
+
+.drop {
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 10px;
+  background-color: rgba(249, 231, 230, 0.8);
+  /*cor de dentro*/
+  border: 5px solid rgba(228, 143, 164);
+  /*cor borda*/
+  z-index: 2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:ho {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.drop:hover .dropdown-content {
+  display: block;
+}
+
+/* Fim Dropdown*/
+
+#pergunta {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+/*Responsive*/
+@media(max-width:1300px) {
+  main {
+    margin-top: 20%;
+  }
+
+  header {
+    margin-top: 20%;
+  }
+
+}
+
+@media(max-width:1080px) {
+
+  #logoCa {
+    display: none;
+  }
+
+  #avatar {
+    display: none;
+  }
+
+  #pergunta {
+    display: none;
+  }
+
+  #pesqNav {
+    float: right;
+    display: none;
+  }
+
+  #navIcon {
+    padding-right: 0;
+  }
+
+  #lupa {
+    display: flex;
+    visibility: visible;
+    text-align: center;
+  }
+
+  nav li {
+    margin-top: 3px;
+    margin-left: 15px;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  main {
+    margin-top: 20%;
+  }
+
+  header {
+    margin-top: 20%;
+  }
+
+  footer {
+    margin-top: 4%;
+  }
+
+  #voltar {
+    display: block;
+  }
+
+  #treslinhas {
+    padding-left: -30px;
+  }
+
+  #li3Limhas {
+    margin-left: -15px !important;
+  }
+
+  .dropdown-content {
+    margin-left: -45px;
+  }
+
+  #faleCnc {
+    position: relative;
+    margin-left: 2%;
+
+  }
+}
+
+@media(max-width:600px) {
+  main {
+    margin-top: 40%;
+  }
+
+  header {
+    margin-top: 25%;
+  }
+
+}
+
+@media(max-width:400px) {
+  main {
+    margin-top: 300px;
+  }
+
+  header {
+    margin-top: 20%;
+  }
+
+}

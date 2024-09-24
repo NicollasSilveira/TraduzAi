@@ -1,0 +1,17 @@
+#setas img {
+  width: 4%;
+  height: 4%;
+  margin: 1.5%;
+  margin-top: 0%;
+}
+
+#icones img {
+  width: 7%;
+  height: 7%;
+  margin: 0.55%;
+  cursor: pointer;
+}
+
+#logoCa {
+  margin-right: 10px;
+}

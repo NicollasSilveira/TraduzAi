@@ -1,0 +1,151 @@
+main {
+  padding-top: 2.7%;
+
+}
+
+#logoCa {
+  margin: -10.3% 0% 1% 3.5%;
+}
+
+#textoCadas {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0 3% 3% 3%;
+}
+
+#h2 {
+  margin: -3.9% 0% 0% 0%;
+}
+
+#facaParte {
+  font-size: 120%;
+  margin: 0 0 0 0;
+}
+
+#font {
+  font-size: 120%;
+  margin: 0 0 0 0;
+}
+
+#fundo {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1.3%;
+  border-radius: 10px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+.linha div {
+  width: 40%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+#inpes,
+#botao1,
+#senha,
+#senhaConfirm {
+  width: 100%;
+  padding: 2%;
+  border: 1px solid #ccc;
+  border-radius: 120px;
+}
+
+#botao-container {
+  display: flex;
+  justify-content: center;
+}
+
+#botao1 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 120px;
+  cursor: pointer;
+
+}
+
+
+.sexo-options {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+}
+
+.sexo-options label,
+.sexo-options input {
+  margin-right: 7px;
+  transform: translateY(40%);
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container i {
+  position: absolute;
+  right: 10px;
+  top: 80%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/***************************************/
+
+#avatar {
+  right: 0;
+  padding-right: 30px;
+  bottom: 0;
+  z-index: -1;
+  position: fixed;
+}
+
+@media(max-width:1080px) {
+
+  #h2 {
+    margin: -30% 0% 10% 5%;
+  }
+
+  #facaParte {
+    margin: 0 0 10% 3%;
+  }
+
+  #fundo {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3%;
+    border-radius: 10px;
+  }
+
+  .linha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10%;
+  }
+
+  #linha2 {
+    padding-top: 25px;
+  }
+
+  .linha div {
+    width: 100%;
+
+  }
+
+}
+
+@media(max-width:400px) {
+  .sexo-options {
+    flex-direction: column;
+  }
+}

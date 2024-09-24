@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <meta charset="utf-8" />
+    <script src="script/adicionais.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre Nós</title>
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="css/sobrenos.css" />
+    <link rel="stylesheet" href="css/bg.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li id="pergunta">
+            <a><p>Precisa de ajuda? Digite aqui como podemos te ajudar.</p></a>
+          </li>
+          <li>
+              <input
+                id="pesqNav"
+                type="text"
+                placeholder="Selecione um artigo..."
+                list="artigos"
+                name="artigos"
+                oninput="redirecionarParaArtigo(this.value)"
+              />
+              <datalist id="artigos">
+                <a><option value="Como usar o TraduzAí?" data-target="como-usar-traduza"></option></a>
+                <a><option value="Encontrei um erro na minha tradução, e agora?" data-target="erro-traducao"></option></a>
+                <a><option value="Por que não há outros idiomas disponíveis?" data-target="outros-idiomas"></option></a>
+
+              </datalist>
+          </li>
+      <!-- MENU DROPDOWN !-->
+            <div id="navIcon">
+              <li>
+                <a href="index.html"><img id="logoNav" src="img/Logo.png" alt="Volar a pagina principal" title="Volar a pagina principal"></a>
+              </li>
+              <li>
+                <img src="img/LuaModoEscuro.png" class="trocarTema" id="temaClar" width="40px" height="40px" alt="Trocar para tema escuro" title="Trocar para tema escuro"/>
+                <img src="img/SolModoClaro.png" class="trocarTema" id="temaEscu" width="33px" height="33px" alt="Trocar para tema claro" title="Trocar para tema claro"/>
+              </li>
+        <div class="drop">
+          <li><img class="imgNav" id="treslinhas" src="img/tresLinhas.png"/>
+        <div class="dropdown-content">
+                  <a id="textoDrop" href="login.html" style="text-decoration: none;">Login</a>
+                  <a id="textoDrop2" href="cadastro.html" style="text-decoration: none;">Cadastro</a>
+                  <a id="textoDrop4" href="ajuda.html" style="text-decoration: none;">Central de Ajuda</a>
+        </div>
+        </div>
+            <li><a href="Configuracoes.html"><img class="imgNav" src="img/pessoa.png" title="Configurações" /></a></li>
+        </div>
+      <!-- FIM MENU DROPDOWN !-->
+      </nav>
+    </header>
+    <main>
+      <img id="logoCa" src="img/LogoTest.png" height="70px" width="210px">
+
+      <div class="sobrenos">
+        <p>
+          <h2 id="h2"><strong>Quem somos nós?</strong></h2>
+         <p id="font"> Descubra a equipe apaixonada por trás do TraduzAí!</p>
+          </p>
+
+
+
+        <div class="perfil">
+          <img class="julio" src="img/_Julio.jpg" alt="Julio Nascimento">
+          <h3><strong>Julio Nascimento</strong></h3>
+          <p class="pd">Conheça Julio, um jovem senhor de espírito vibrante e paixões diversificadas.
+            Envolvido pelo mundo dos
+            videogames, literatura e cultura oriental, ele desempenha um papel essencial na nossa equipe. Julio é o
+            talento
+            por trás do design e do conceito deste site, trazendo sua criatividade e visão para criar uma experiência
+            única
+            para nossos visitantes.</p>
+        </div>
+
+        <div class="perfil">
+          <img class="nico" src="img/_Nicollas.jpg" alt="Nicollas">
+          <h3><strong>Nicollas Vieira</strong></h3>
+          <p class="pd">Conheça Nicollas, um membro fundamental de nossa equipe, cuja paixão por futebol,
+            academia e dedicação aos detalhes o destacam como o cérebro do grupo. Com sua expertise
+            técnica, ele desempenha um papel crucial na criação e manutenção do nosso site. Nicollas é
+            responsável por garantir que todos os aspectos técnicos estejam perfeitamente integrados,
+            proporcionando uma experiência suave e funcional para nossos usuários.
+          </p>
+        </div>
+
+        <div class="perfil">
+          <img class="pamela" src="img/_Pâmela.jpg" alt="Pâmela">
+          <h3><strong>Pâmela Salazar</strong></h3>
+          <p class="pd">Conheça Pâmela, nossa talentosa integrante cujo charme e doçura remetem
+            diretamente às páginas
+            de um mangá. Apaixonada por leitura, anime e pelas disputas emocionantes no League of Legends
+            ao lado de seus amigos, ela traz um toque especial para o nosso time. Pâmela é a mente criativa por
+            trás da estilização deste site, dedicando-se a cada detalhe para garantir uma experiência visualmente
+            agradável para você, nosso estimado usuário.</p>
+        </div>
+
+        <div class="perfil">
+          <img class="gabriel" src="img/_Gabriel.jpg" alt="Gabriel">
+          <h3><strong>Gabriel Menicke</strong></h3>
+          <p class="pd">Conheça Gabriel, o especialista técnico do nosso site. Apaixonado por cultura
+            nerd e esportes,
+            ele garante que tudo funcione perfeitamente nos bastidores. Quando não está codificando, está
+            provavelmente mergulhado em jogos de videogame ou assistindo a uma partida de futebol. Gabriel é a
+            pessoa que mantém as coisas funcionando sem problemas para que você possa desfrutar de uma
+            ótima experiência online.
+          </p>
+        </div>
+
+        <!--<div class="perfil">
+          <img class="gio" src="img/_Giovanna.jpg" alt="Giovana">
+          <h3><strong>Giovana Barbosa</strong></h3>
+          <p class="pd">Conheça Giovana, nossa dedicada e introspectiva amante de livros e defensora dos
+            animais! É
+            responsável por auxiliar os times em todas as demandas solicitadas. Com sua abordagem tranquila
+            e focada, ela se destaca em fornecer suporte eficiente e eficaz, garantindo que as necessidades sejam
+            atendidas de maneira oportuna e completa.</p>
+        </div>-->
+
+        <div class="perfil">
+          <img class="rafael" src="img/_Rafael.png" alt="Rafael Paulino">
+          <h3><strong>Rafael Paulino</strong></h3>
+          <p class="pd">Conheça Rafael, o meticuloso guardião das suas experiências no nosso site. Amante
+            da música, dos
+            jogos e animes, Rafael traz uma calma ponderada para a equipe. Sua natureza observadora permite
+            que ele mergulhe nos detalhes de cada página, garantindo que cada elemento esteja perfeitamente
+            alinhado para proporcionar a melhor experiência possível para você, nosso usuário.</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="avatar">
+        <img id="avatrImg" src="img/Avatar.png" width="430px" height="430px"/>
+      </div>
+    <!-- O MESMO ESQUEMA DA LOGIN -->
+      <div id="faleCnc2">
+        <ul>
+          <li>
+            <a href="https://mail.google.com/mail/?view=cm&to=faleconoscotraduzai@gmail.com&su=Oi,%20pode%20me%20ajudar?" target="_blank">
+               <img id="em" src="img/Email_TemaClaro.png"> <a href="https://mail.google.com/mail/?view=cm&to=faleconoscotraduzai@gmail.com&su=Oi,%20pode%20me%20ajudar?" target="_blank" id="fale">Fale conosco</a>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

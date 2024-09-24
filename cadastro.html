@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
+  <script src="script/cadastro.js"></script>
+  <link rel="stylesheet" href="css/bg.css" />
+  <link rel="stylesheet" href="css/cadastro.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <script src="script/script.js"></script>
+  <script src="script/adicionais.js"></script>
+  <title>CadastraAí</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li id="pergunta">
+          <a>
+            <p>Precisa de ajuda? Digite aqui como podemos te ajudar.</p>
+          </a>
+        </li>
+        <li>
+          <input id="pesqNav" type="text" placeholder="Selecione um artigo..." list="artigos" name="artigos"
+            oninput="redirecionarParaArtigo(this.value)" />
+          <datalist id="artigos">
+            <a>
+              <option value="Como usar o TraduzAí?" data-target="como-usar-traduza"></option>
+            </a>
+            <a>
+              <option value="Encontrei um erro na minha tradução, e agora?" data-target="erro-traducao"></option>
+            </a>
+            <a>
+              <option value="Por que não há outros idiomas disponíveis?" data-target="outros-idiomas"></option>
+            </a>
+          </datalist>
+        </li>
+
+        <li>
+          <img src="img/lupa.png" id="lupa" width="32px" height="32px">
+        </li>
+        <!-- MENU DROPDOWN !-->
+        <div id="navIcon">
+          <li>
+            <a href="index.html"><img id="logoNav" src="img/Logo.png" alt="Volar a pagina principal"
+                title="Volar a pagina principal"></a>
+          </li>
+          <li>
+            <img src="img/LuaModoEscuro.png" class="trocarTema" id="temaClar" width="40px" height="40px"
+              alt="Trocar para tema escuro" title="Trocar para tema escuro" />
+            <img src="img/SolModoClaro.png" class="trocarTema" id="temaEscu" width="33px" height="33px"
+              alt="Trocar para tema claro" title="Trocar para tema claro" />
+          </li>
+
+          <div class="drop">
+            <li><img class="imgNav" id="treslinhas" src="img/tresLinhas.png" />
+              <div class="dropdown-content">
+                <a id="textoDrop" href="login.html" style="text-decoration: none;">Login</a>
+                <a id="textoDrop3" href="sobreNos.html" style="text-decoration: none;">Sobre</a>
+                <a id="textoDrop4" href="ajuda.html" style="text-decoration: none;">Central de Ajuda</a>
+              </div>
+          </div>
+          <li><a href="Configuracoes.html"><img id="pessoa" class="imgNav" title="Configurações"
+                src="img/pessoa.png" /></a></li>
+        </div>
+        <!-- FIM MENU DROPDOWN !-->
+    </nav>
+  </header>
+
+  <main>
+
+    <img id="logoCa" src="img/LogoTest.png" height="70px" width="210px">
+
+    <div id="textoCadas">
+      <p>
+        <b>
+          <h2 id="h2">Informe seus dados abaixo, é bem rapidinho:</h2>
+        </b>
+      <p id="facaParte">Faça parte da nossa comunidade de amantes de leitura.</p>
+    </div>
+    <div id="fundo">
+      <form action="php/cadastro.php" method="POST">
+        <div id="fundo2">
+          <div class="linha">
+            <div>
+              <label>
+                <h4>Nome:</h4>
+              </label>
+              <input id="inpes" type="text" name="nome" placeholder="Digite seu nome" maxlength="90" minlength="3"
+                pattern="[^0-9]+" required class="u_nome" />
+            </div>
+            <div id="linha2">
+              <label>
+                <h4>CPF:</h4>
+              </label>
+              <input id="inpes" class="cpf" type="text" maxlength="14" name="cpf" placeholder="xxx.xxx.xxx-xx"
+                required />
+            </div>
+          </div>
+          <div class="linha">
+            <div>
+              <label>
+                <h4>Data de Nascimento:</h4>
+              </label>
+              <input id="inpes" type="date" name="datanasc" class="datanasc" maxlength="10" required />
+            </div>
+            <div id="linha2">
+              <label>
+                <h4>Sexo:</h4>
+              </label>
+              <section class="sexo-options">
+
+                <input id="M" name="sexo" type="radio" value="M" />
+                <label for="M">
+                  <p>Masculino</p>
+                </label>
+
+                <input id="F" name="sexo" type="radio" value="F" />
+                <label for="F">
+                  <p>Feminino</p>
+                </label>
+
+                <input id="O" name="sexo" type="radio" value="O" />
+                <label for="O">
+                  <p>Outros</p>
+                </label>
+              </section>
+            </div>
+          </div>
+          <div class="linha">
+            <div>
+              <label>
+                <h4>Nome da Mãe:</h4>
+              </label>
+              <input id="inpes" type="text" name="mae" placeholder="Digite o nome da sua mãe" class="u_mae" required />
+            </div>
+            <div id="linha2">
+              <label>
+                <h4>Endereço:</h4>
+              </label>
+              <input id="inpes" type="text" name="endereco" class="u_endereco" placeholder="Digite o seu endereço" required />
+            </div>
+          </div>
+          <div class="linha">
+            <div>
+              <label>
+                <h4>País:</h4>
+              </label>
+              <input id="inpes" type="text" name="pais" placeholder="Digite seu país" class="u_pais" required />
+            </div>
+            <div id="linha2">
+              <label>
+                <h4>Telefone:</h4>
+              </label>
+              <input id="inpes" class="telefone" type="tel" maxlength="15" name="telefone" placeholder="(xx) xxxxx-xxxx"
+                required />
+            </div>
+          </div>
+          <div class="linha">
+            <div>
+              <label>
+                <h4>E-mail:</h4>
+              </label>
+              <input id="inpes" type="email" name="email" placeholder="Digite seu E-mail" required />
+            </div>
+            <div id="linha2">
+              <label>
+                <h4> Login:</h4>
+              </label>
+              <input id="inpes" type="text" class="login" name="login" placeholder="Digite seu nome de usuário"
+                maxlength="12" minlength="8" required />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="input-container">
+              <label>
+                <h4>Senha:</h4>
+              </label>
+              <input class="inp" type="password" id="senha" name="senha" placeholder="Digite sua senha" size="30"
+                maxlength="12" minlength="8" required />
+              <i class="bi bi-eye" id="m-senha-1" onclick="mostrarSenha()"></i>
+            </div>
+
+            <div class="input-container" id="linha2">
+              <label>
+                <h4>Confirmar senha:</h4>
+              </label>
+              <input class="inp" type="password" id="senhaConfirm"
+                placeholder="Confirme sua senha" size="30" maxlength="8" minlength="8" required />
+              <i class="bi bi-eye" id="m-senha-2" onclick="mostrarConfirm()"></i>
+            </div>
+          </div>
+          <br>
+          <div class="linha full-width" id="botao-container">
+            <div>
+              <button class="inp" id="botao1" type="submit" name="submit" class="submit_btn">Enviar</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div id="avatar">
+      <img id="avatrImg" src="img/Avatar.png" width="430px" height="430px" />
+    </div>
+    <!-- O MESMO ESQUEMA DA LOGIN -->
+    <div id="faleCnc2">
+      <ul>
+        <li>
+          <a href="https://mail.google.com/mail/?view=cm&to=faleconoscotraduzai@gmail.com&su=Oi,%20pode%20me%20ajudar?"
+            target="_blank">
+            <img id="em" src="img/Email_TemaClaro.png"> <a
+              href="https://mail.google.com/mail/?view=cm&to=faleconoscotraduzai@gmail.com&su=Oi,%20pode%20me%20ajudar?"
+              target="_blank" id="fale">Fale conosco</a>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/login.js"></script>
+    <meta charset="UTF-8"/>
+    <script src="script/adicionais.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>LogaAí</title>
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/bg.css"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li id="pergunta">
+            <a><p>Precisa de ajuda? Digite aqui como podemos te ajudar.</p></a>
+          </li>
+          <li>
+              <input
+                id="pesqNav"
+                type="text"
+                placeholder="Selecione um artigo..."
+                list="artigos"
+                name="artigos"
+                oninput="redirecionarParaArtigo(this.value)"
+              />
+              <datalist id="artigos">
+                <a><option value="Como usar o TraduzAí?" data-target="como-usar-traduza"></option></a>
+                <a><option value="Encontrei um erro na minha tradução, e agora?" data-target="erro-traducao"></option></a>
+                <a><option value="Por que não há outros idiomas disponíveis?" data-target="outros-idiomas"></option></a>
+
+              </datalist>
+          </li>
+      
+            <div id="navIcon">
+              <li>
+                <a href="index.html"><img id="logoNav" src="img/Logo.png" alt="Volar a pagina principal" title="Volar a pagina principal"></a>
+              </li>
+              <li>
+                <img src="img/LuaModoEscuro.png" class="trocarTema" id="temaClar" width="40px" height="40px" alt="Trocar para tema escuro" title="Trocar para tema escuro"/>
+                <img src="img/SolModoClaro.png" class="trocarTema" id="temaEscu" width="33px" height="33px" alt="Trocar para tema claro" title="Trocar para tema claro"/>
+              </li>
+              <!-- MENU DROPDOWN !-->
+              <div class="drop">
+                  <li>
+                    <img class="imgNav" id="treslinhas" src="img/tresLinhas.png"/>
+                    <div id="dropdown" class="dropdown-content">
+                      <a id="textoDrop2" href="cadastro.html" style="text-decoration: none">Cadastro</a>
+                      <a id="textoDrop3" href="sobreNos.html" style="text-decoration: none">Sobre</a>
+                      <a id="textoDrop4" href="ajuda.html" style="text-decoration: none">Central de Ajuda</a>
+                    </div>
+                  </li>
+                </div>
+              <!-- FIM MENU DROPDOWN !-->
+                <li>
+                  <a href="Configuracoes.html"
+                    ><img class="imgNav" src="img/pessoa.png" title="Configurações"
+                  /></a>
+                </li>
+              </div>
+      </nav>
+    </header>
+
+    <main>
+      <img id="logoCa" src="img/LogoTest.png" height="70px" width="210px">
+      <aside id="novoUsuario">
+        <p id="novoAqui">É novo por aqui?</p>
+        <p>
+          Faça seu cadastro gratuitamente agora!
+          <a id="clickAqui" href="cadastro.html">Clique aqui</a>.
+        </p>
+      </aside>
+
+      <div id="divCenter">
+        <form id="logar" action="telaFuncional.html">
+          <ul>
+            <li id="um"><font><a id="Login_a_login">Login:</a> </font></li>
+            <li id="dois"><input type="text" class="login-login" placeholder="Digite aqui seu nome de usuário cadastrado" maxlength="6" minlength="6"></li>
+            <li id="tres"><font><a id="Login_a_senha">Senha:</a> </font></li>
+            <li id="quatro"><input type="password" class="senha-login" placeholder="Digite aqui sua senha cadastrada" maxlength="8" minlength="8"></li>
+            <!--<li><a href="cadastro.html" id="cadaLogin"><h1>Cadastre-se</h1></a></li>-->
+          <div id="Botao">
+            <div id="cinco"><input type="submit" value="Entrar" id="botao"></div>
+          </div>
+          </ul>
+          
+        </form>
+      </div>
+
+    </main>
+
+    <footer>
+      <div id="avatar">
+        <img id="avatrImg" src="img/Avatar.png" width="430px" height="430px"/>
+      </div>
+    <!-- O MESMO ESQUEMA DA LOGIN -->
+      <div id="faleCnc2">
+        <ul>
+          <li>
+            <a href="https://mail.google.com/mail/?view=cm&to=faleconoscotraduzai@gmail.com&su=Oi,%20pode%20me%20ajudar?" target="_blank">
+                <img id="em" src="img/Email_TemaClaro.png"> <a id="fale">Fale conosco</a>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

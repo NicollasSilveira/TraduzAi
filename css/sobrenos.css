@@ -1,0 +1,229 @@
+#topo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+#logoCa {
+  margin: -5% 0 1% 3.5%;
+}
+
+#h2 {
+  margin: -3% 0% 0% 2%;
+}
+
+/* font do sub-T da quem somos*/
+#font {
+  font-size: 20px;
+  margin: 0 0 0 2%;
+}
+
+.topo {
+  display: flex;
+}
+
+.sobrenos {
+  margin: 0 0 3% 1%;
+
+}
+
+
+
+main {
+  margin-left: 0;
+}
+
+.foto {
+  font-size: 30px;
+}
+
+.icon {
+  width: 20px;
+  height: 14px;
+}
+
+/*.equipe {
+  width: 420px;
+  height: 250px;
+}
+*/
+
+
+/*rafael sobre*/
+
+
+.perfil {
+  overflow: auto;
+  /* Para não bugar as imagens e o float */
+  margin-bottom: 20px;
+  /* Espaço entre os perfis */
+  background-color: #f9cddc;
+  /* cor do plano de fundo*/
+  max-width: 50%;
+  border: 15px solid #f9cddc;
+  border-radius: 15px;
+  margin: 0 0 1% 10%;
+ 
+}
+
+.perfil img {
+  float: left;
+  margin-right: 20px;
+  /* não deixar colado na imagem */
+  width: 100%;
+  /* deixar a %¨legal */
+  max-width: 225px;
+  /* fazer não passar disso */
+  height: auto;
+  /* Manter a imagem certa */
+}
+
+.perfil h3 {
+  margin: 0;
+
+}
+
+.pd {
+  margin: 1%;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.sobrenos p {
+  margin-bottom: 3%;
+}
+
+@media (max-width:1080px) {
+  #avatar {
+    display: none;
+  }
+
+  .perfil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 75%;
+    margin: 4% 0 0 12%;
+  }
+
+  #logoCa {
+    margin: 5% 0 1% 3.5%;
+  }
+}
+
+
+
+@media (max-width:768px) {
+  .perfil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 75%;
+    margin: 4% 0 0 12%;
+  }
+
+  /* font do sub-T da quem somos*/
+  #font {
+    font-size: 20px;
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+
+  #h2 {
+    text-align: center;
+  }
+
+  #avatar {
+    display: none;
+  }
+
+  main {
+    margin-left: 0%;
+  }
+
+  header {
+    margin-top: 0 !important;
+  }
+
+  main {
+    margin-top: 25% !important;
+  }
+
+  #logoCa {
+    margin: -5% 0 1% 3.5%;
+  }
+
+
+
+
+  .perfil img {
+    float: none;
+    margin: 0 0 20px 0;
+    width: 50%;
+  }
+
+  #avatar {
+    display: none;
+  }
+
+
+
+}
+
+@media (maxi-width:720px) {
+  #logoCa {
+    margin: -5% 0 1% 3.5%;
+  }
+
+  main {
+    margin-left: 0%;
+  }
+
+  #h2 {
+    text-align: center;
+  }
+
+  #font {
+
+    text-align: center;
+  }
+
+  #avatar {
+    display: none;
+  }
+
+}
+
+@media (maxi-width:480px) {
+  .perfil img {
+    width: 75%
+  }
+
+  #h2 {
+    text-align: center;
+  }
+
+  #font {
+
+    text-align: center;
+  }
+
+  main {
+    margin-left: 0%;
+  }
+
+  #logoCa {
+    margin: -5% 0 1% 3.5%;
+  }
+
+  #avatar img {
+    display: none;
+  }
+
+}

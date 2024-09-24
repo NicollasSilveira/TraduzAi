@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="css/config.css" />
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/adicionais.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TraduzAí</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bg.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li id="pergunta">
+            <a><p>Precisa de ajuda? Digite aqui como podemos te ajudar.</p></a>
+          </li>
+          <li>
+              <input id="pesqNav" type="text" placeholder="Selecione um artigo..." list="artigos" name="artigos" oninput="redirecionarParaArtigo(this.value)"/>
+              <datalist id="artigos">
+                <a><option value="Como usar o TraduzAí?" data-target="como-usar-traduza"></option></a>
+                <a><option value="Encontrei um erro na minha tradução, e agora?" data-target="erro-traducao"></option></a>
+                <a><option value="Por que não há outros idiomas disponíveis?" data-target="outros-idiomas"></option></a>
+            </datalist>
+          </li>
+
+          <li>
+            <img src="img/lupa.png"
+              id="lupa" width="32px" height="32px">
+          </li>  
+      <!-- MENU DROPDOWN !-->
+              <div id="navIcon">
+                <li>
+                  <a href="index.html"><img id="logoNav" src="img/Logo.png" alt="Volar a pagina principal" title="Volar a pagina principal"></a>
+                </li>
+                <li>
+                  <img src="img/LuaModoEscuro.png" class="trocarTema" id="temaClar" width="40px" height="40px" alt="Trocar para tema escuro" title="Trocar para tema escuro"/>
+                  <img src="img/SolModoClaro.png" class="trocarTema" id="temaEscu" width="33px" height="33px" alt="Trocar para tema claro" title="Trocar para tema claro"/>
+                </li>
+
+        <div class="drop">
+          <li><img class="imgNav" id="treslinhas" src="img/tresLinhas.png"/>
+            <div class="dropdown-content">
+                <a id="textoDrop3" href="sobreNos.html" style="text-decoration: none;">Sobre</a>
+                <a id="textoDrop4" href="ajuda.html" style="text-decoration: none;">Central de Ajuda</a>
+            </div>
+        </div>
+          <li><a href="Configuracoes.html"><img id="pessoa" class="imgNav" title="Configurações" src="img/pessoa.png"/></a></li>
+        </div>
+      <!-- FIM MENU DROPDOWN !-->
+      </nav>
+    </header>
+    <main>
+      <!-- Conteúdo principal -->
+      <div id="Menu">
+        <li id="opMenu">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="aumentarTexto()"
+            id="aumentarTexto"
+          >
+            Aumentar Fonte do texto
+          </button>
+        </li>
+        <li id="opMenu">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="diminuirTexto"
+            onclick="diminuirTexto()"
+          >
+            Diminuir Fonte do texto
+          </button>
+        </li>
+        <li id="opMenu">
+          <a
+            id="deslogar"
+            href="index.html"
+            type="button"
+            class="btn btn-secondary"
+            onclick="localStorage.clear();"
+            >Deslogar</a
+          >
+        </li>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
