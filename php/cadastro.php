@@ -10,7 +10,6 @@ $dados = array(
     $_POST["email"],
     $_POST["login"],
     $_POST["senha"],
-    $_POST["sexo"],
-    $isAdmin = 0
+    $_POST["sexo"]
 );
 ?>

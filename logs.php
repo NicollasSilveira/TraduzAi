@@ -22,16 +22,18 @@
 
 <?php
 include "php\connectDb.php";
-
 $sql = "SELECT id, USUARIO_id, dataHora, acaoResult, dadosEntrada FROM log";
 $result = $conn->query($sql);
+
 ?>
 
 <body>
   <header>
     <nav>
       <ul>
-        <li><h1>ADMIN</h1></li>
+        <li>
+          <h1>ADMIN</h1>
+        </li>
         <li>
           <img src="img/lupa.png" id="lupa" width="32px" height="32px">
         </li>
@@ -66,34 +68,40 @@ $result = $conn->query($sql);
   <main>
 
     <div class="logs">
-        <h2>Central de logs</h2>
-        <div class="camposLogs">
-          <table style="width: 100%;">
-            <tr>
-              <th>ID</th>
-              <th>USUARIO</th>
-              <th>DATA/HORARIO</th>
-              <th>AÇÃO</th>
-              <th>ENTRADA</th>
-           </tr>
-           <?php
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>
+      <h2>Central de logs</h2>
+
+      <form action="consulta.php" method="GET">
+        <h3>Consultar Usuario</h3>
+        <label>ID Usuario: <input type="number" name="id" min="1" required></input></label>
+        <input type="submit" value="Consultar"></input>
+      </form>
+      <div class="camposLogs">
+        <table style="width: 100%;">
+          <tr>
+            <th>ID</th>
+            <th>USUARIO</th>
+            <th>DATA/HORARIO</th>
+            <th>AÇÃO</th>
+            <th>ENTRADA</th>
+          </tr>
+          <?php
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              echo "<tr>
                 <th>" . $row['id'] . "</th>
                 <th>" . $row['USUARIO_id'] . "</th>
                 <th>" . $row['dataHora'] . "</th>
                 <th>" . $row['acaoResult'] . "</th>
                 <th>" . $row['dadosEntrada'] . "</th>
              </tr>";
-                }
-            } else {
-                echo "0 results";
             }
-            $conn->close();
-           ?>
-          </table>
-        </div>
+          } else {
+            echo "0 results";
+          }
+          $conn->close();
+          ?>
+        </table>
+      </div>
 
     </div>
 

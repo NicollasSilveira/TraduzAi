@@ -132,11 +132,33 @@ function verificar_data_nasci(event) {
   }
 }
 
+const cep = $(".u_cep").val();
+const logradouro = $(".u_logra").val();
+const bairro = $(".bairro").val();
+const estado = $(".estado").val();
+cep.addEventListener('focusout', async ()=>{
+  
+  const response = await fetch (`viacep.com.br/ws/${cep.value}/json/`); 
+  if(!response.ok) {
+    throw await response.json(); 
+  } 
+
+
+console.log(responseCep.cep, responseCep.logradouro, responseCep.bairro, responseCep.estado);  const responseCep = await response.json (); 
+
+cep.value = responseCep.cep;
+logradouro.value = responseCep.logradouro;
+bairro.value = responseCep.bairro;
+estado.value = responseCep.estado;
+})
+
+
+
 $(document).ready(function () {
   // Mascara nos campos
   $(".cpf").mask("000.000.000-00");
   $(".telefone").mask("(00) 00000-0000");
-
+  $(".u_cep").mask("00000-000");
   // Chamada das funções ao click no butão
   $("form").on("submit", function (event) {
     if (validar_cpf(event)) {
